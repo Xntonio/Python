@@ -6,7 +6,7 @@ out_right = cv2.VideoWriter('right_vid.avi',cv2.VideoWriter_fourcc(*'XVID'),30.0
 
 while (cap_left.isOpened() and cap_right.isOpened()):
   ret, imagen = cap_left.read()
-  ret2, imagen2 = cap_left.read()
+  ret2, imagen2 = cap_right.read()
 
   if ret == True and ret2 == True:
     cv2.imshow('Left Camera', imagen)
